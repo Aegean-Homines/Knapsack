@@ -6,13 +6,19 @@
 #include "definitions.h"
 
 class GreyCode {
-    private:
+private:
 
-    public:
-        GreyCode( int s );
-        // first subset is empty, this function tells what's next 2^n-1 subsets
-        // ret value: is last, is add, positin
-        std::pair< bool, std::pair< bool, int > > Next();
+	int size;
+	int current_count;
+	int lastElement;
+
+	int num_total;
+
+public:
+    GreyCode( int s );
+    // first subset is empty, this function tells what's next 2^n-1 subsets
+    // ret value: is last, is add, positin
+    std::pair< bool, std::pair< bool, int > > Next();
 };
 
 // brute-force knapsack
